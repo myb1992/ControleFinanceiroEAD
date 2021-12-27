@@ -40,7 +40,7 @@ include_once '_head.php';
          <tr class="odd gradeX">
          <td>(nome)</td>
          <td>
-         <a href="" class="btn btn-warning btn-sm">Alterar</a>
+         <a href="alterar_categoria.php" class="btn btn-warning btn-sm">Alterar</a>
          </td>
          <td></td>
          <td class="center">4</td>
