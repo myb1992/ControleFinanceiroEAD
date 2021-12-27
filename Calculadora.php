@@ -19,19 +19,19 @@ if(isset($_POST['btn_somar'])){
   
   $soma = $numero1 + $numero2;  
 }
-if(isset($_POST['btn_subtrair'])){
+else if(isset($_POST['btn_subtrair'])){
   $numero3 = $_POST['n3'];
   $numero4 = $_POST['n4'];
   
   $subtrair = $numero3 - $numero4;  
 }
-if(isset($_POST['btn_multiplicar'])){
+else if(isset($_POST['btn_multiplicar'])){
   $numero3 = $_POST['n5'];
   $numero4 = $_POST['n6'];
   
   $multiplicar = $numero5 * $numero6;  
 }
-if(isset($_POST['btn_dividir'])){
+else if(isset($_POST['btn_dividir'])){
   $numero3 = $_POST['n7'];
   $numero4 = $_POST['n8'];
   
