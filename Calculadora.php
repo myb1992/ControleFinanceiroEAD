@@ -10,7 +10,7 @@ $numero8 = '';
 
 $soma = '';
 $subtracao = '';
-$multilicar = '';
+$multiplicar = '';
 $dividir = '';
 
 if(isset($_POST['btn_somar'])){
@@ -23,17 +23,17 @@ else if(isset($_POST['btn_subtrair'])){
   $numero3 = $_POST['n3'];
   $numero4 = $_POST['n4'];
   
-  $subtrair = $numero3 - $numero4;  
+  $subtracao = $numero3 - $numero4;  
 }
 else if(isset($_POST['btn_multiplicar'])){
-  $numero3 = $_POST['n5'];
-  $numero4 = $_POST['n6'];
+  $numero5 = $_POST['n5'];
+  $numero6 = $_POST['n6'];
   
   $multiplicar = $numero5 * $numero6;  
 }
 else if(isset($_POST['btn_dividir'])){
-  $numero3 = $_POST['n7'];
-  $numero4 = $_POST['n8'];
+  $numero7 = $_POST['n7'];
+  $numero8 = $_POST['n8'];
   
   $dividir = $numero7 / $numero8;  
 }
@@ -64,7 +64,7 @@ else if(isset($_POST['btn_dividir'])){
       <input type="text" name="n4" value="<?= $numero4 ?>">
       
       <button name="btn_subtrair">Subtrair</button>
-      <input disabled value"<?= $subtrair ?>">
+      <input disabled value="<?= $subtracao ?>">
       
     </form>
        <form action="calculadora.php" method="post">
@@ -75,7 +75,7 @@ else if(isset($_POST['btn_dividir'])){
       <input type="text" name="n6" value="<?= $numero6 ?>">
       
       <button name="btn_multiplicar">Multiplicar</button>
-      <input disabled value"<?= $multiplicar ?>">
+      <input disabled value="<?= $multiplicar ?>">
       
     </form>
     <form action="calculadora.php" method="post">
@@ -86,7 +86,7 @@ else if(isset($_POST['btn_dividir'])){
       <input type="text" name="n8" value="<?= $numero8 ?>">
       
       <button name="btn_dividir">Dividir</button>
-      <input disabled value"<?= $dividir ?>">
+      <input disabled value="<?= $dividir ?>">
       
     </form>
     
