@@ -1,0 +1,89 @@
+<?php
+
+$ganhosJan = '';
+$despesasJan = '';
+$lucroJan = '';
+$ganhosFev = '';
+$despesasFev = '';
+$lucroFev = '';
+$ganhosMar = '';
+$despesasMar = '';
+$lucroMar = '';
+$ganhosAbr = '';
+$despesasAbr = '';
+$lucroAbr = '';
+$ganhosMai = '';
+$despesasMai = '';
+$lucroMai = '';
+$ganhosJun = '';
+$despesasJun = '';
+$lucroJun = '';
+$ganhosJul = '';
+$despesasJul = '';
+$lucroJul = '';
+$ganhosAgo = '';
+$despesasAgo = '';
+$lucroAgo = '';
+$ganhosSet = '';
+$despesasSet = '';
+$lucroSet = '';
+$ganhosOut = '';
+$despesasOut = '';
+$lucroOut = '';
+$ganhosNov = '';
+$despesasNov = '';
+$lucroNov = '';
+$ganhosDez = '';
+$despesasDez = '';
+$lucroDez = '';
+$ganhosAnual = '';
+$despesasAnual = '';
+$lucroAnual = '';
+//Tentar <?php
+//$ganhosJan = trim($_POST["ganhosJan"]);
+//if(empty($ganhosJan) || is_null($ganhosJan)){
+//echo 'Preencha o campo Ganhos Janeiro!';
+//}else{
+//echo 'Tudo OK';
+//}
+//?>
+//Para ficar melhor, use sempre required nas tags HTML (dos inputs) que você quer que seja obrigatórios, exemplo:
+<input type="text" name="username" required>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<?php
+include_once '_head.php';
+?>
+
+<body>
+<div id="wrapper">
+<?php
+include_once'_topo.php';
+include_once'_menu.php';
+?>
+<!--/. NAV SIDE -->
+<div id="page-wrapper">
+<div id="page-inner">
+<div class="row">
+<div class="col-md-12">
+<h2>Exercicio Balanço e Lucro</h2>
+</div>
+</div>
+<!--/. ROW -->
+<hr />
+<div class="form-group">
+<label>Ganhos do mês Janeiro: </label>
+<input type="text" name"ganhosJan"value="<?= $ganhosJan ?>" required>
+<label>Despesas Janeiro: </label>
+<input type="text" name"despesasJan"value="<?= $despesasJan ?>" required>
+<label>Lucro: </label>
+<inpu disabled value="<?=lucroJan ?>">
+<br>
+
+
+<label> 
+
+
+
+
