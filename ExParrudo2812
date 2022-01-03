@@ -39,6 +39,12 @@ $lucroDez = '';
 $ganhosAnual = '';
 $despesasAnual = '';
 $lucroAnual = '';
+if(isset($_POST['btn_calcular'])){
+$ganhosJan = $_POST['ganhosJan'];
+$despesasJan = $_POST['despesasJan'];
+$lucroJan = $ganhosJan - $despesasJan;
+    
+}
 //Tentar <?php
 //$ganhosJan = trim($_POST["ganhosJan"]);
 //if(empty($ganhosJan) || is_null($ganhosJan)){
@@ -72,17 +78,108 @@ include_once'_menu.php';
 </div>
 <!--/. ROW -->
 <hr />
+<form action="ExParrudo.php" method="post">
 <div class="form-group">
 <label>Ganhos do mês Janeiro: </label>
 <input type="text" name"ganhosJan"value="<?= $ganhosJan ?>" required>
 <label>Despesas Janeiro: </label>
 <input type="text" name"despesasJan"value="<?= $despesasJan ?>" required>
 <label>Lucro: </label>
-<inpu disabled value="<?=lucroJan ?>">
+<input disabled value="<?=lucroJan ?>">
 <br>
+<div class="form-group">
+<label>Ganhos do mês Fevereiro: </label>
+<input type="text" name"ganhosFev"value="<?= $ganhosFev ?>" required>
+<label>Despesas Fevereiro: </label>
+<input type="text" name"despesasFev"value="<?= $despesasFev ?>" required>
+<label>Lucro: </label>
+<input disabled value="<?=lucroFev ?>">
+<br>
+<div class="form-group">
+<label>Ganhos do mês Março: </label>
+<input type="text" name"ganhosMar"value="<?= $ganhosMar ?>" required>
+<label>Despesas Março: </label>
+<input type="text" name"despesasMar"value="<?= $despesasMar ?>" required>
+<label>Lucro: </label>
+<input disabled value="<?=lucroMar ?>">
+<br>
+<div class="form-group">
+<label>Ganhos do mês Abril: </label>
+<input type="text" name"ganhosAbr"value="<?= $ganhosAbr ?>" required>
+<label>Despesas Abril: </label>
+<input type="text" name"despesasAbr"value="<?= $despesasAbr ?>" required>
+<label>Lucro: </label>
+<input disabled value="<?=lucroAbr ?>">
+<br>
+<div class="form-group">
+<label>Ganhos do mês Maio: </label>
+<input type="text" name"ganhosMai"value="<?= $ganhosMai ?>" required>
+<label>Despesas Maio: </label>
+<input type="text" name"despesasMai"value="<?= $despesasMai ?>" required>
+<label>Lucro: </label>
+<input disabled value="<?=lucroMai ?>">
+<br>
+<div class="form-group">
+<label>Ganhos do mês Junho: </label>
+<input type="text" name"ganhosJun"value="<?= $ganhosJun ?>" required>
+<label>Despesas Junho: </label>
+<input type="text" name"despesasJun"value="<?= $despesasJun ?>" required>
+<label>Lucro: </label>
+<input disabled value="<?=lucroJun ?>">
+<br>
+<div class="form-group">
+<label>Ganhos do mês Julho: </label>
+<input type="text" name"ganhosJul"value="<?= $ganhosJul ?>" required>
+<label>Despesas Julho: </label>
+<input type="text" name"despesasJul"value="<?= $despesasJul ?>" required>
+<label>Lucro: </label>
+<input disabled value="<?=lucroJul ?>">
+<br>
+<div class="form-group">
+<label>Ganhos do mês Agosto: </label>
+<input type="text" name"ganhosAgo"value="<?= $ganhosAgo ?>" required>
+<label>Despesas Agosto: </label>
+<input type="text" name"despesasAgo"value="<?= $despesasAgo ?>" required>
+<label>Lucro: </label>
+<input disabled value="<?=lucroAgo ?>">
+<br>
+<div class="form-group">
+<label>Ganhos do mês Setembro: </label>
+<input type="text" name"ganhosSet"value="<?= $ganhosSet ?>" required>
+<label>Despesas Setembro: </label>
+<input type="text" name"despesasSet"value="<?= $despesasSet ?>" required>
+<label>Lucro: </label>
+<input disabled value="<?=lucroSet ?>">
+<br>
+<div class="form-group">
+<label>Ganhos do mês Outubro: </label>
+<input type="text" name"ganhosOut"value="<?= $ganhosOut ?>" required>
+<label>Despesas Outubro: </label>
+<input type="text" name"despesasOut"value="<?= $despesasOut ?>" required>
+<label>Lucro: </label>
+<input disabled value="<?=lucroOut ?>">
+<br>
+<div class="form-group">
+<label>Ganhos do mês Novembro: </label>
+<input type="text" name"ganhosNov"value="<?= $ganhosNov ?>" required>
+<label>Despesas Novembro: </label>
+<input type="text" name"despesasNov"value="<?= $despesasNov ?>" required>
+<label>Lucro: </label>
+<input disabled value="<?=lucroNov ?>">
+<br>
+<div class="form-group">
+<label>Ganhos do mês Dezembro: </label>
+<input type="text" name"ganhosDez"value="<?= $ganhosDez ?>" required>
+<label>Despesas Dezembro: </label>
+<input type="text" name"despesasDez"value="<?= $despesasDez ?>" required>
+<label>Lucro: </label>
+<input disabled value="<?=lucroDez ?>">
+<br>
+<button name="btn_calcular">Calcular</button>
+ </form>
 
 
-<label> 
+ 
 
 
 
