@@ -39,10 +39,50 @@ $lucroDez = '';
 $ganhosAnual = '';
 $despesasAnual = '';
 $lucroAnual = '';
+$ganhoAnual = '';
+$percaAnual = '';
+$lucroAnual = '';
 if(isset($_POST['btn_calcular'])){
 $ganhosJan = $_POST['ganhosJan'];
 $despesasJan = $_POST['despesasJan'];
 $lucroJan = $ganhosJan - $despesasJan;
+$ganhosFev = $_POST['ganhosFev'];
+$despesasFev = $_POST['despesasFev'];
+$lucroFev = $ganhosFev - $despesasFev;
+$ganhosMar = $_POST['ganhosMar'];
+$despesasMar = $_POST['despesasMar'];
+$lucroMar = $ganhosMar - $despesasMar;
+$ganhosAbr = $_POST['ganhosAbr'];
+$despesasAbr = $_POST['despesasAbr'];
+$lucroAbr = $ganhosAbr - $despesasAbr;
+$ganhosMai = $_POST['ganhosMai'];
+$despesasMai = $_POST['despesasMai'];
+$lucroMai = $ganhosMai - $despesasMai;
+$ganhosJun = $_POST['ganhosJun'];
+$despesasJun = $_POST['despesasJun'];
+$lucroJun = $ganhosJun - $despesasJun;
+$ganhosJul = $_POST['ganhosJul'];
+$despesasJul = $_POST['despesasJul'];
+$lucroJul = $ganhosJul - $despesasJul;
+$ganhosAgo = $_POST['ganhosAgo'];
+$despesasAgo = $_POST['despesasAgo'];
+$lucroAgo = $ganhosAgo - $despesasAgo;
+$ganhosSet = $_POST['ganhosSet'];
+$despesasSet = $_POST['despesasSet'];
+$lucroSet = $ganhosSet - $despesasSet;
+$ganhosOut = $_POST['ganhosOut'];
+$despesasOut = $_POST['despesasOut'];
+$lucroOut = $ganhosOut - $despesasOut;
+$ganhosNov = $_POST['ganhosNov'];
+$despesasNov = $_POST['despesasNov'];
+$lucroNov = $ganhosNov - $despesasNov;
+$ganhosDez = $_POST['ganhosDez'];
+$despesasDez = $_POST['despesasDez'];
+$lucroDez = $ganhosDez - $despesasDez;
+$ganhoAnual = $ganhosJan + $ganhosFev + $ganhosMar + $ganhosAbr + $ganhosMai + $ganhosJun + $ganhosJul + $ganhosAgo + $ganhosSet + $ganhosOut + $ganhosNov + $ganhosDez;
+$percaAnual = $despesasJan + $despesasFev + $despesasMar + $despesasAbr + $despesasMai + $despesasJun + $despesasJul + $despesasAgo + $despesasSet + $despesasOut + $despesasNov + $despesasDez;
+$lucroAnual = $lucroJan + $lucroFev + $lucroMar + $lucroAbr + $lucroMai + $lucroJun + $lucroJul + $lucroAgo + $lucroSet + $lucroOut + $lucroNov + $lucroDez;
+
     
 }
 //Tentar <?php
@@ -175,6 +215,16 @@ include_once'_menu.php';
 <label>Lucro: </label>
 <input disabled value="<?=lucroDez ?>">
 <br>
+<label> Ganho Anual: </label>
+<input disabled value="<?=$ganhoAnual ?>">
+<br>
+<label> Perca Anual: </label>
+<input disabled value="<?=$percaAnual ?>">
+<br>
+<label> Lucro Anual: </label>
+<input disabled value="<?=$lucroAnual ?>">
+<br>
+
 <button name="btn_calcular">Calcular</button>
  </form>
 
