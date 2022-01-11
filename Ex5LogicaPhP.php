@@ -40,5 +40,7 @@ echo '<span style='color:red;'>OBESIDADE MÓRBIDA</span>';
       <input type="text" name"altura" value="<?= $altura ?>">
       
       <buton name="btn_calcular">Calcular</button>
+    <br>
+      <label>IMC</label>
       <input disabled value="<?= $imc ?>">
     </form>
