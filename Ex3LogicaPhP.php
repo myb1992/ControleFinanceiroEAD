@@ -4,25 +4,26 @@ $nota2 = '';
 $nota3 = '';
 $nota4 = '';
 $media = '';
+$situacao = '';
 
-if(isset($_POST['btn_calcular'])){
-$nota1 = trim($_POST['nota1']);
-$nota2 = trim($_POST['nota2']);
-$nota3 = trim($_POST['nota3']);
-$nota4 = trim($_POST['nota4']);
-$media = ($nota1 + $nota2 + $nota3 + $nota4)/ 4;
+if(isset($_POST['btnCalcular'])){
+$nota1 = trim($_POST['n1']);
+$nota2 = trim($_POST['n2']);
+$nota3 = trim($_POST['n3']);
+$nota4 = trim($_POST['n4']);
 
 if($nota1 == '' || $nota2 == '' || $nota3 == '' || $nota4 = ''){
 echo 'Preencher o(s) campo(s) obrigatório(s)';
 } else if (!is_numeric($nota1) || is_numeric($nota2) || is_numeric($nota3) || is_numeric($nota4)){
 echo 'Número(s) incorreto(s). Favor corrigí-lo(s)';
 } else {
+  $media = ($nota1 + $nota2 + $nota3 + $nota4)/ 4;
 } if($media <= 39){
-echo '<span style='color:red;'>REPROVADO</span>';
+
 } else if($media >= 40 && $media <= 59){
-echo '<span style='color:yellow;'>EXAME</span>';
+
 } else if($media >= 60){
-echo '<span style='color:green;'>APROVADO</span>';
+
 }
 
 ?>
@@ -36,15 +37,16 @@ echo '<span style='color:green;'>APROVADO</span>';
   </head>
   
   <form method="post" action="Ex3LogicaPhP.php">
-      <label>Nota 1</label>
-      <input type="text" name"nota1" value="<?php $nota1 ?>">
-      <label>Nota 2</label>
-      <input type="text" name"nota2" value="<?= $nota2 ?>">
-      <label>Nota 3</label>
-      <input type="text" name"nota3" value="<?php $nota3 ?>">
-      <label>Nota 4</label>
-      <input type="text" name"nota4" value="<?= $numero2 ?>">
-      
-      <buton name="btn_calcular">Calcular</button>
-      <input disabled value="<?= $media ?>">
-    </form>
+    <input placeholder="Nota 1" name="n1" value="<?= $nota1 ?>">
+    <input placeholder="Nota 2" name="n2" value="<?= $nota2 ?>">
+    <input placeholder="Nota 3" name="n3" value="<?= $nota3 ?>">
+    <input placeholder="Nota 4" name="n4" value="<?= $nota4 ?>">
+    <button name="btnCalcular">Calcular Media</button>
+    <br><br>
+    <input placeholder="Media" name="media" disabled value="<?= $media ?>">
+    <br><br>
+    <input placeholder="Situação" name="situacao" disabled value="<?= $situacao ?>">
+  </form>
+  </body>
+</html>
+    
