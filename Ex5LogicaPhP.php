@@ -14,13 +14,13 @@ echo 'Preencher o(s) campo(s) obrigatório(s)';
 echo 'Número(s) incorreto(s). Favor corrigí-lo(s)';
 } else {
 } if($imc >= 0 && $imc <= 20){
-echo '<span style='color:yellow;'>MAGRO</span>';
+echo 'MAGRO';
 } else if($imc >= 21 && $imc <= 25){
-echo '<span style='color:green;'>PESO IDEAL</span>';
+echo 'PESO IDEAL';
 } else if($imc >= 26 && $imc <= 30){
-echo '<span style='color:orange;'>OBESO</span>';
+echo 'OBESO';
 } else if($imc >= 31){
-echo '<span style='color:red;'>OBESIDADE MÓRBIDA</span>';
+echo 'OBESIDADE MÓRBIDA>';
 }
 
 ?>
@@ -35,12 +35,15 @@ echo '<span style='color:red;'>OBESIDADE MÓRBIDA</span>';
   
   <form method="post" action="Ex5LogicaPhP.php">
       <label>Peso 1</label>
-      <input type="text" name"peso" value="<?php $peso ?>">
+      <input type="text" name="peso" value="<?php $peso ?>">
       <label>Altura</label>
-      <input type="text" name"altura" value="<?= $altura ?>">
+      <input type="text" name="altura" value="<?= $altura ?>">
       
       <buton name="btn_calcular">Calcular</button>
     <br>
       <label>IMC</label>
       <input disabled value="<?= $imc ?>">
     </form>
+  </body>
+</html>
+
