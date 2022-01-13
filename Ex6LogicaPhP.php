@@ -19,15 +19,15 @@ echo 'Preencher o(s) campo(s) obrigatório(s)';
 echo 'Número(s) incorreto(s). Favor corrigí-lo(s)';
 } else {
 } if($soma_aumentos >= 0 && $salario_aumento <= 100){
-echo '<span style='color:red;'>Aumento RUIM</span>';
+echo 'Aumento RUIM';
 } else if($soma_aumentos >= 101 && $salario_aumento <= 200){
-echo '<span style='color:yellow;'>Aumento RAZOAVEL</span>';
+echo 'Aumento RAZOAVEL';
 } else if($soma_aumentos >= 201 && $salario_aumento <= 300){
-echo '<span style='color:teal;'>Aumento BOM</span>';
+echo 'Aumento BOM';
 } else if($soma_aumentos >= 301 && $salario_aumento <= 400){
-echo '<span style='color:blue;'>Aumento ÓTIMO</span>';
+echo 'Aumento ÓTIMO';
 } else if($soma_aumentos > 401){
-echo '<span style='color:green;'>Aumento EXCELENTE</span>';
+echo 'Aumento EXCELENTE';
 }
 
 ?>
@@ -42,7 +42,7 @@ echo '<span style='color:green;'>Aumento EXCELENTE</span>';
   
   <form method="post" action="Ex6LogicaPhP.php">
       <label>Salário</label>
-      <input type="text" name"salario" value="<?php $salario ?>">
+      <input type="text" name="salario" value="<?php $salario ?>">
       
       <buton name="btn_calcular">Calcular</button>
     <br>
@@ -55,3 +55,5 @@ echo '<span style='color:green;'>Aumento EXCELENTE</span>';
     <label>Aumento TOTAL</label>
     <input disabled value="<?= $soma_aumentos ?>">
     </form>
+  </body>
+</html>
