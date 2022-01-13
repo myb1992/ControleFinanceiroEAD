@@ -17,15 +17,15 @@ echo 'Preencher o(s) campo(s) obrigatório(s)';
 echo 'Número(s) incorreto(s). Favor corrigí-lo(s)';
 } else {
 } if($salario_aumento >= 0 && $salario_aumento <= 100){
-echo '<span style='color:red;'>Aumento Nível 1</span>';
+echo 'Aumento Nível 1';
 } else if($salario_aumento >= 101 && $salario_aumento <= 200){
-echo '<span style='color:yellow;'>Aumento Nível 2</span>';
+echo 'Aumento Nível 2';
 } else if($salario_aumento >= 201 && $salario_aumento <= 300){
-echo '<span style='color:orange;'>Aumento Nível 3</span>';
+echo 'Aumento Nível 3';
 } else if($salario_aumento >= 301 && $salario_aumento <= 400){
-echo '<span style='color:blue;'>Aumento Nível 4</span>';
+echo 'Aumento Nível 4';
 } else if($salario_aumento > 400){
-echo '<span style='color:green;'>Aumento Nível 5</span>';
+echo 'Aumento Nível 5';
 }
 
 ?>
@@ -40,10 +40,13 @@ echo '<span style='color:green;'>Aumento Nível 5</span>';
   
   <form method="post" action="Ex3LogicaPhP.php">
       <label>Salário</label>
-      <input type="text" name"salario" value="<?php $salario ?>">
+      <input type="text" name="salario" value="<?php $salario ?>">
       <label>Aumento</label>
-      <input type="text" name"aumento" value="<?= $aumento ?>">
+      <input type="text" name="aumento" value="<?= $aumento ?>">
       
       <buton name="btn_calcular">Calcular</button>
       <input disabled value="<?= $salario_final ?>">
     </form>
+  </body>
+</html>
+
