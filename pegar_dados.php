@@ -3,18 +3,23 @@
 $nome = '';
 $sobre = '';
 
-if(isset($_POST['btn_mostrar'])){
+if(isset($_POST['btn_mostrar']))
+{
   $nome = $_POST['nome_usuario'];
   $sobre = $_POST['sobrenome_usuario'];
   
-  if(trim($nome) == ''){
+  if(trim($nome) == '')
+{
     echo 'Preencher o campo NOME';
-    }
-  else if(trim($sobre) ==''){
+}
+  else if(trim($sobre) =='')
+{
     echo 'Preencher o campo SOBRENOME';
-}else{
-    
-  }
+}
+  else
+{
+   header("location: mostrar_dados.php?nome=$nome&sobrenome=$sobre"); 
+}
 
 ?>
 
