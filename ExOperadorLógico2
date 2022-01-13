@@ -1,9 +1,0 @@
-<?php
-
-$numero1 = '';
-$numero2 = '';
-$numero3 = '';
-
-$div = $numero2 / 2;
-$resultado = $div;
-
