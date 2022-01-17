@@ -20,6 +20,7 @@ if(isset($_POST['btn_mostrar']))
 {
    header("location: mostrar_dados.php?nome=$nome&sobrenome=$sobre"); 
 }
+}
 
 ?>
 
