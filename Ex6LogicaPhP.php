@@ -13,7 +13,7 @@ $salario15 =$salario + (($salario * (15/100)) / 100)
 $salario18 =$salario +(($salario * (18/100)) / 100)
 $soma_aumentos = $salario15 + $salario18;
 
-if($salario == ''){
+else if($salario == ''){
 echo 'Preencher o(s) campo(s) obrigatório(s)';
 } else if (!is_numeric($salario)){
 echo 'Número(s) incorreto(s). Favor corrigí-lo(s)';
@@ -28,6 +28,7 @@ echo 'Aumento BOM';
 echo 'Aumento ÓTIMO';
 } else if($soma_aumentos > 401){
 echo 'Aumento EXCELENTE';
+}
 }
 
 ?>
