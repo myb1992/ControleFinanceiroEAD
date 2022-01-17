@@ -8,7 +8,9 @@ $banco = '';
 if(isset($_POST['btn_mostrar']))
 {
   $nome = $_POST['nome_usuario'];
-  $sobre = $_POST['sobrenome_usuario'];
+  $valorinv = $_POST['valor_invesimento'];
+  $sitinv = $_POST['situacao_investimento'];
+  $banco = $_POST['banco'];
   
   if(trim($nome) == '')
 {
@@ -22,7 +24,7 @@ if(isset($_POST['btn_mostrar']))
 {
     echo 'Preencher o campo Situação do Investimento';
 }
-    else if($valorinv != 'G' || $valorinv != 'P')
+    else if($valorinv != 'G' && $valorinv != 'P')
 {
     echo 'Favor usar as siglas P ou G';
 }
@@ -30,7 +32,7 @@ if(isset($_POST['btn_mostrar']))
 {
     echo 'Preencher o campo Banco';
 }
-  else if($banco != 'IT' || $banco != 'SA' || $banco != 'SI')
+  else if($banco != 'IT' && $banco != 'SA' && $banco != 'SI')
 {
     echo 'Favor usar as siglas IT, SA ou SI';
 }
