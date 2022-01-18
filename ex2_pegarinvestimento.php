@@ -7,20 +7,20 @@ $banco = '';
 
 if(isset($_POST['btn_mostrar']))
 {
-  $nome = $_POST['nome_usuario'];
-  $valorinv = $_POST['valor_invesimento'];
-  $sitinv = $_POST['situacao_investimento'];
-  $banco = $_POST['banco'];
+  $nome = trim($_POST['nome_usuario']);
+  $valorinv = trim($_POST['valor_invesimento']);
+  $sitinv = trim($_POST['situacao_investimento']);
+  $banco = trim($_POST['banco']);
   
-  if(trim($nome) == '')
+  if($nome == '')
 {
     echo 'Preencher o campo NOME';
 }
-  else if(trim($valorinv) =='')
+  else if($valorinv =='')
 {
     echo 'Preencher o campo Valor do Investimento';
 }  
-  else if(trim($sitinv) =='')
+  else if($sitinv =='')
 {
     echo 'Preencher o campo Situação do Investimento';
 }
@@ -28,7 +28,7 @@ if(isset($_POST['btn_mostrar']))
 {
     echo 'Favor usar as siglas P ou G';
 }
-  else if(trim($banco) =='')
+  else if($banco =='')
 {
     echo 'Preencher o campo Banco';
 }
@@ -39,7 +39,7 @@ if(isset($_POST['btn_mostrar']))
   
   else
 {
-   header("location: mostrar_dados.php?nome=$nome&sobrenome=$sobre"); 
+   header("location: mostrar_dados.php?nome=$nome&valor_investimento=$valorinv&situacao_investimento=$sitinv&banco=$banco"); 
 }
 }
 
@@ -55,15 +55,22 @@ if(isset($_POST['btn_mostrar']))
   </head>
   
   <body>
-    <form action="mostrar_dados.php" method="get">
-      <label>Nome</label>
-      <input name="nome_usuario" value="<?= $nome ?>">
-      <label>Valor Investimento</label>
-      <input type="text" name="valor_investimento"value="<?= $valorinv ?>">
-      <label>Situação Investimento. Usar G para: Ganho de 3% e P para: Perca 5%</label>
-      <input type="text" name="situacao_investimento"value="<?= $sitinv ?>">
-      <label>Banco. Usar 'SA' para Santander, 'IT' para Itaú e 'SI' para Sicredi.</label>
-      <input type="text" name="banco"value="<?= $banco ?>">
+    <form action="ex2_pegarinvestimento.php" method="get">
+      <b><label>Nome</label></b>
+      <br>
+      <input tipe="text" name="nome_usuario" placeholder="Digite seu nome" value="<?= $nome ?>">
+      <br><br>
+      <b><label>Valor Investimento</label></b>
+      <br>
+      <input type="text" name="valor_investimento" placeholder="Digite o valor do Invest." value="<?= $valorinv ?>">
+      <br><br>
+      <b><label>Situação Investimento. Usar G para: Ganho de 3% e P para: Perca 5%</label></b>
+      <br><br>
+      <b><input type="text" name="situacao_investimento"value="<?= $sitinv ?>"></b>
+      <br><br>
+      <b><label>Banco. Usar 'SA' para Santander, 'IT' para Itaú e 'SI' para Sicredi.</label></b>
+      <br><br>
+      <b><input type="text" name="banco"value="<?= $banco ?>"></b>
       <button name="btn_mostrar">Ver Resultado</button>
     </form>
   </body>
