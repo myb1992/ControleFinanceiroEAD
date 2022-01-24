@@ -7,40 +7,47 @@ $banco = '';
 
 if(isset($_POST['btn_mostrar']))
 {
+  $ul = '';
+  $li = '';
   $nome = trim($_POST['nome_usuario']);
   $valorinv = trim($_POST['valor_invesimento']);
-  $sitinv = trim($_POST['situacao_investimento']);
-  $banco = trim($_POST['banco']);
+  $sitinv = strtoupper(trim($_POST['situacao_investimento']));
+  $banco = strtoupper(trim($_POST['banco']));
   
   if($nome == '')
 {
-    echo 'Preencher o campo NOME';
+    $li = '<li>Preencher o campo NOME</li>';
 }
-  else if($valorinv =='')
+  if($valorinv =='')
 {
-    echo 'Preencher o campo Valor do Investimento';
+    $li = $li . '<li>Preencher o campo Valor do Investimento</li>';
 }  
-  else if($sitinv =='')
+  if($sitinv =='')
 {
-    echo 'Preencher o campo Situação do Investimento';
+    $li = $li . '<li>Preencher o campo Situação do Investimento</li>';
 }
-    else if($valorinv != 'G' && $valorinv != 'P')
+  if($valorinv != 'G' && $valorinv != 'P')
 {
-    echo 'Favor usar as siglas P ou G';
+    $li = $li .'<li>Favor usar as siglas P ou G</li>';
 }
-  else if($banco =='')
+  if($banco =='')
 {
-    echo 'Preencher o campo Banco';
+    $li = $li .'<li>Preencher o campo Banco</li>';
 }
-  else if($banco != 'IT' && $banco != 'SA' && $banco != 'SI')
+  if($banco != 'IT' && $banco != 'SA' && $banco != 'SI')
 {
-    echo 'Favor usar as siglas IT, SA ou SI';
+    $li = $li .'<li>Favor usar as siglas IT, SA ou SI</li>';
 }
   
+  //Verifica se tem algo dentro da variável $li, se houver, mostra a mensagem
+  if($li != ''){
+    $ul ="<ul>$li</ul>";
+  }
   else
-{
-   header("location: mostrar_dados.php?nome=$nome&valor_investimento=$valorinv&situacao_investimento=$sitinv&banco=$banco"); 
-}
+  {
+    $parametros = "nome=$nome&valor_investimento=$valorinv&situacao_investimento=$sitinv&banco=$banco";
+header("location: mostrar_dados.php?$parametros");
+  } 
 }
 
 ?>
@@ -73,5 +80,6 @@ if(isset($_POST['btn_mostrar']))
       <b><input type="text" name="banco"value="<?= $banco ?>"></b>
       <button name="btn_mostrar">Ver Resultado</button>
     </form>
+    <?= $ul ?>
   </body>
 </html>
