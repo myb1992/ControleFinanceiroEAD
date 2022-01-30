@@ -1,15 +1,15 @@
 <?php
 $tabuada = '';
 $contagem = '';
-
---BUGADO--
+$r = '';
 
 if (isset($_POST['btn_calcular'])) {
-    $tabuada = is_numeric($_POST['tabuada']);
-    $contagem = is_numeric($_POST['contagem']);
+    $tabuada = $_POST['tabuada'];
+    $contagem = $_POST['contagem'];
+
     for ($i = 1; $i <= $contagem; $i++) {
         $r = ($tabuada * $i);
-        echo $tabuada . ' X ' . $i . ' = ' . $r; 
+        echo "$tabuada  X $i = $r <br>";
     }
 }
 ?>
