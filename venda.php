@@ -4,7 +4,6 @@ $nome = '';
 $valor = '';
 $quantidade = '';
 
-
 if(isset($_POST['btn_calcular'])){
     $nome = $_POST['nome_produto'];
     $valor = $_POST['valor_unitario'];
@@ -20,13 +19,9 @@ if(isset($_POST['btn_calcular'])){
         echo 'Prencher o campo Quatidade' . '<br>';
 
     }else{
-        header("location: ex_conclusaodavenda.php?nome_produto=$nome&valor_unitario=$valor&quantidade=$quantidade");
-        
-    }
-    
+        header("location: ex_conclusaodavenda.php?nome_produto=$nome&valor_unitario=$valor&quantidade=$quantidade");    
+ }  
 }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -50,9 +45,6 @@ if(isset($_POST['btn_calcular'])){
         <input name="quantidade" value="<?= $quantidade?>">
 
         <button name="btn_calcular">Calcular</button>
-
-
     </form>
-
 </body>
 </html>
