@@ -1,14 +1,12 @@
 <?php
-$nome = '';
-$idade = '';
+$celsius = '';
+$farenheit = '';
 $vezes = '';
 
 // : endif = {}
 
-if (isset($_POST['btn_mostrar'])) {
-    $nome = $_POST['nome'];
-    $idade = $_POST['idade'];
-    $vezes = $_POST['vezes'];
+if (isset($_POST['btn_converter'])) {
+    $celsius = $_POST[''];
 
     for($i = 0; $i < $vezes; $i++){
         echo 'Meu nome é :' . $nome . ' ' . 'Tenho: ' . $idade . ' Anos de Idade <br>';
@@ -26,15 +24,12 @@ if (isset($_POST['btn_mostrar'])) {
 
 <body>
 
-    <form method="post" action="ex1_for.php">
-        <label>Nome</label>
-        <input type="text" name="nome" value="<?= $nome ?>">
-        <label>Idade</label>
-        <input type="text" name="idade" value="<?= $idade ?>">
-        <label>Quantidade de Vezes</label>
-        <input type="text" name="vezes" value="<?= $vezes ?>">
+    <form method="post" action="">
+        <label>Conversão</label>
+        
+        
 
-        <button name="btn_mostrar">Mostrar</button>
+        <button name="btn_converter">Converter</button>
     </form>
 
 
