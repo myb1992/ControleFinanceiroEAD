@@ -6,5 +6,10 @@ Echo 'Im so tired, I keep hoping that something will change with her, but it doe
 else {
 Echo 'Its hard to change how we think, what we do during the day... I really wish we could be together Isa! I really do! I love you with all my heart! Id do anything for you!
      Ive been through so much shit, yet the pain of not beeing with you, is stronger than anything I have ever faced.'
+      
+else if {
+      Echo 'Yeah bro, time is the best and the worst thing at the same time!Especially for someone very anxious. Time gave us memorable moments with very nice people...
+            Yet the same time that gave us that, took us that. Now Im waiting like a mofo for December.'
+
   
   ?>
